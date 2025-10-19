@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(233, 162, 111);
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+h2 {
+    text-align: center;
+}
+
+i {
+    display: inline;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.username {
+    display: inline;
+}
+
+.post {
+    background-color: chocolate;
+    border: 2px slod rgb(231, 118, 38);
+}

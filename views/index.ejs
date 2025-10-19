@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postify: Share moments & positivity</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Postify</h1>
+    <h2>Share and Inspire</h2>
+    <% for(post of posts) {%>
+        <div class="post">
+            <hr>
+            <div class="pheader">
+                <i class="fa-solid fa-face-smile"></i>
+                <h3 class="username"><%= post.username %></h3>
+            </div>
+            <img src="<%=post.pic%>" alt="post image">
+            <br>
+            <h4><%=post.content%></h4>
+            <br>
+            <a href="http://localhost:8080/home/<%=post.id%>">view details</a>
+            &nbsp;
+            <a href="http://localhost:8080/home/<%=post.id%>/edit">edit</a>
+            &nbsp;
+            <form method="post" action="http://localhost:8080/home/<%=post.id%>?_method=DELETE">
+                <button>Delete</button>
+            </form>
+        </div>
+    <% } %>
+
+    <a href="http://localhost:8080/home/new">Create new post</a>
+</body>
+</html>

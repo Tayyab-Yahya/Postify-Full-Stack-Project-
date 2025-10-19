@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>username: @<%=post.username%></h1>
+    <h2>id: <%=post.id%></h2>
+    <form method="post" action="http://localhost:8080/home/<%=post.id%>?_method=PATCH">
+        <label for="image">Image Address</label>
+        <br>
+        <textarea rows="10" cols="35" name="pic" id="image"><%=post.pic%></textarea>
+        <br>
+        <label for="cntnt">Content</label>
+        <br>
+        <textarea rows="10" cols="35" name="content" id="cntnt"><%=post.content%></textarea>
+        <br><br>
+        <button>save</button>
+    </form>
+</body>
+</html>
